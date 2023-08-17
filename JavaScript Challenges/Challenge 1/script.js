@@ -66,3 +66,16 @@ let s1 = "25";
 let s2 = "25";
 let result = s1 + s2;
 console.log(result);
+
+//Step 8//
+let result0 = 5 + 3 * 2;
+console.log(result0);
+let result1 = 10 / 2 + 3;
+let result2 = 10 / (2 + 3);
+console.log(result1);
+console.log(result2);
+
+// The reading of the equation is from left to right. For example in the result1 10 / 2 = 5 + 3 = 8. In result2 10 / 5 = 2 due to the ()//
+
+
+
