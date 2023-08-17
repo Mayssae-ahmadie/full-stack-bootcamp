@@ -67,6 +67,17 @@ let s2 = "25";
 let result = s1 + s2;
 console.log(result);
 
+//Step 7//
+console.log(0 === "0");
+console.log(0 !== "0");
+console.log(0 == "0");
+console.log(0 != "0");
+console.log(1 > 0);
+console.log(1 >= 1);
+console.log(1 < 0);
+console.log(1 <= 1);
+
+
 //Step 8//
 let result0 = 5 + 3 * 2;
 console.log(result0);
