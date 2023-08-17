@@ -61,4 +61,8 @@ console.log(tryThisAlso);
 
 //The ${counter} is only functional in the backtick option"
 
-
+//Step 6//
+let s1 = "25";
+let s2 = "25";
+let result = s1 + s2;
+console.log(result);
