@@ -39,3 +39,26 @@ console.log(v3 + " " + typeof (v3));
 console.log(v4 + " " + typeof (v4));
 console.log(v5 + " " + typeof (v5));
 console.log(v6 + " " + typeof (v6));
+
+//Step 5//
+let myText = "Learning Javascript";
+let w1 = "myText";
+let w2 = 'myText';
+let w3 = `myText`;
+
+const counter = 3;
+const backtick = `This is my text using backticks ${counter} times`;
+const singleQuote =
+    'This is my text using single quotations ${counter} times';
+const doubleQuote =
+    "This is my text using double quotations ${counter} times";
+const tryThisAlso = `This is my new version, it’s the ${2 + 3}th version`;
+
+console.log(backtick);
+console.log(singleQuote);
+console.log(doubleQuote);
+console.log(tryThisAlso);
+
+//The ${counter} is only functional in the backtick option"
+
+
