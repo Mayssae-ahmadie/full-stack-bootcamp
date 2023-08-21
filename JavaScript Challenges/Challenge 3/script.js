@@ -1,3 +1,4 @@
+// Step 1//
 // Basic Function //
 function addNumbers(num1, num2) {
     return num1 + num2
@@ -49,3 +50,48 @@ function compute(num1, num2, operation) {
 }
 
 console.log(compute(5, 2, "add"), compute(5, 3, "substract"), compute(5, 2, "multiply"), compute(10, 10, "divide"), compute(10, 0, "divide"));
+
+//Step 2//
+// Arrow Function //
+const squareNumber = (number) => number * number;
+console.log(squareNumber(2 * 2));
+
+// Understanding Scopes //
+let globalVar = 5;
+
+console.log(squareNumber(globalVar));
+
+const squareNumber1 = (number1) => { let localVar = 6; return localVar * localVar } //the return won't show in the console since it's a localVar//
+
+// Step 3 //
+//For loop// 
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+//While Loop//
+let j = 10;
+
+while (j >= 1) {
+    console.log(j);
+    j--;
+}
+
+// Do-While Loop with Conditionals //
+let i = 1;
+
+do {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+    i++;
+} while (i <= 10);
+
+// Advanced Loop Challenge //
+let favoriteFruits = ["avocado", "mango", "plum", "peach", "kiwi", "banana"];
+
+for (let fruit of favoriteFruits) {
+    if (fruit.length > 5) {
+        console.log(fruit);
+    }
+}
