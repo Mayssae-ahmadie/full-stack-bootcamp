@@ -9,8 +9,13 @@ const personalInfo = {
     name: "Mayssaê",
     age: 30,
     height: 1.55,
-    location: "Sawfar",
+    locations: "Sawfar",
     nationality: "Lebanese",
+    contactInfo:
+    {
+        email: "mayssae.ahmadie@gmail.com",
+        phone: "71 899858",
+    }
 };
 console.log(personalInfo);
 
@@ -33,4 +38,49 @@ console.log(additionalInfo);
 
 const fullInfo = { ...personalInfo, ...additionalInfo };
 console.log(fullInfo);
+
+// Step 3 //
+// Destructuring Arrays //
+const [firstNum, secondNum, thirdNum, fourthNum, fifthNum] = fiveNumbers;
+
+console.log(firstNum);
+console.log(secondNum);
+console.log(thirdNum);
+
+// Destructuring Objects //
+const { name, age, height, locations, nationality, contactInfo: { email, phone } } = personalInfo;
+console.log(name);
+console.log(locations);
+console.log(nationality);
+
+// Step 4 //
+// Nested Destructuring //
+console.log(email);
+console.log(phone);
+
+// Rest with Destructuring //
+const [num1, num2, ...restOfNumbers] = fiveNumbers;
+
+console.log(num1);
+console.log(num2);
+console.log(restOfNumbers);
+
+// Merging and Overwriting with Spread //
+const obj1 = {
+    name: "Mayssaê",
+    age: 30,
+    occupation: "Dentist",
+    locations: "Sawfar"
+};
+
+const obj2 = {
+    occupation: "Full-stack Developer",
+    hobby: "Hiking"
+};
+
+const mergedObject = { ...obj1, ...obj2 };
+
+console.log(mergedObject);
+
+
 
