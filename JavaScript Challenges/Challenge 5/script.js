@@ -122,18 +122,16 @@ cloneButton.addEventListener('click', toggleClonedDiv);
 
 // Element Removal //
 
-const removeHeaderButton = document.createElement('removeheader');
-removeHeaderButton.classList.add('removeheader');
-const paragraphHeader = document.createElement('p');
-paragraphHeader.textContent = 'Remove Header';
-removeHeaderButton.appendChild(paragraphHeader);
+const removeHeaderButton = document.createElement('button');
+removeHeaderButton.textContent = 'Remove Header';
 document.body.appendChild(removeHeaderButton);
 
-removeHeaderButton.style.backgroundColor = 'bleu';
-paragraphHeader.style.color = 'white';
+removeHeaderButton.addEventListener('click', function () {
+    let header = document.querySelector('header');
+    if (header) {
+        header.remove();
+    }
+});
 
-function removeHeader() {
-    header.remove();
-}
+// Inserting Elements //
 
-removeHeaderButton.addEventListener('click', removeHeader);
