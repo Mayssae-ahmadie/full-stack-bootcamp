@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Challenge 5.1</title>
-  </head>
-  <body>
-    
-  </body>
-  <script src="script.js"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS Challenge 5.1</title>
+</head>
+
+<body>
+  <h1> Registration Form </h1>
+  <form id="registrationForm">
+    <!-- Full Name Field -->
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required><br><br>
+
+    <!-- Email Address Field -->
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Password Field -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <!-- Confirm Password Field -->
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+  </form> <br>
+
+  <div id="errorMessages" style="color: red;"></div>
+  <div id="successMessage" style="color: green;"></div>
+
+</body>
+<script src="script.js"></script>
+
 </html>

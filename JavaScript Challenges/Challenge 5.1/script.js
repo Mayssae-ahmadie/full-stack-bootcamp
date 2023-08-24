@@ -47,3 +47,36 @@ function handleKeyDown(event) {
 }
 
 document.addEventListener('keydown', handleKeyDown);
+
+document.getElementById('registrationForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get form field values
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    // Error message container
+    const errorMessages = document.getElementById('errorMessages');
+
+    // Validate email using a simple regular expression
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (emailPattern !== email) {
+        errorMessages.innerHTML = 'Please enter a valid email address.';
+        return;
+    }
+
+    // Check if password and confirm password match
+    if (password !== confirmPassword) {
+        errorMessages.innerHTML = 'Password and Confirm Password do not match.';
+        return;
+    }
+
+    // If all validations pass, show success message
+    errorMessages.innerHTML = '';
+    const successMessage = document.getElementById('successMessage');
+    successMessage.innerHTML = 'Registration successful!';
+
+    // You can now submit the form data to your server here.
+});
