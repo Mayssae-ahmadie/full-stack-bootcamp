@@ -95,6 +95,8 @@ const quotesArray = [
   },
 ];
 
+//Step 2
+
 // Create the blockquote element
 const blockquoteElement = document.createElement('blockquote');
 
@@ -121,3 +123,32 @@ blockquoteElement.appendChild(blockquoteText);
 blockquoteElement.appendChild(authorDiv);
 document.body.appendChild(blockquoteElement);
 
+//Step 3
+
+const container = document.querySelector('.quotes');
+
+function renderQuotes(quotes) {
+  container.innerHTML = '';
+
+  quotes.forEach(quote => {
+    const blockquote = document.createElement('blockquote');
+    blockquote.innerHTML = `
+      <p>${quote.content}</p>
+      <div class="author">&mdash; 
+      <cite>${quote.author}</cite></div>
+    `;
+    container.appendChild(blockquote);
+  });
+}
+
+// Call the function to render the quotes from the quotesArray
+renderQuotes(quotesArray);
+
+//Step 4//
+
+/* filterInput.addEventListener('input', event => {
+  const filterValue = event.target.value.toLowerCase();
+
+  const filteredQuotes = quotesArray.filter(quote => quote.author.toLowerCase().includes(filterValue));
+  renderQuotes(filteredQuotes);
+}); */
